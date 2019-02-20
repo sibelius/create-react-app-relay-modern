@@ -1,25 +1,32 @@
 {
   "name": "cra-relay",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
-    "react-scripts": "2.1.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "dependencies": {
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-relay": "^2.0.0",
+    "react-scripts": "2.1.5"
+  },
+  "devDependencies": {
+    "babel-plugin-relay": "^2.0.0",
+    "graphql": "^14.1.1",
+    "relay-compiler": "^2.0.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "private": true,
+  "scripts": {
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "relay": "relay-compiler --src ./src --schema ./data/schema.graphql",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  }
 }
